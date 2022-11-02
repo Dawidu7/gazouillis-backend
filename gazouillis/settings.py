@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
 
     'users',
+    'tweets',
 ]
 
 MIDDLEWARE = [
@@ -144,4 +145,4 @@ AUTH_USER_MODEL = 'users.User'
 CORS_ALLOW_ALL_ORIGINS = True
 
 
-CSRF_TRUSTED_ORIGINS = ['https://gazouillis-backend-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://gazouillis-b.up.railway.app']
