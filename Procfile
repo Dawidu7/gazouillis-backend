@@ -1,1 +1,1 @@
-web: gunicorn gazouillis.wsgi --log-file 
+web: gunicorn gazouillis.wsgi
