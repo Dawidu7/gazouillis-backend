@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -135,6 +136,9 @@ AUTH_USER_MODEL = 'users.User'
 
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 CSRF_TRUSTED_ORIGINS = ['https://gazouillis-backend-production.up.railway.app']
