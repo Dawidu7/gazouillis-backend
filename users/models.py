@@ -27,8 +27,8 @@ class User(AbstractBaseUser):
     email = models.EmailField(max_length=320, unique=True)
     username = models.CharField(max_length=20, unique=True)
     join_date = models.DateField(auto_now_add=True)
-    bio = models.CharField(max_length=255)
-    profile_pic_url = models.CharField(max_length=255)
+    bio = models.CharField(max_length=255, blank=True)
+    profile_pic_url = models.CharField(max_length=255, blank=True)
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
 
