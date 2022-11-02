@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'corsheaders',
+    'whitenoise.runserver_nostatic',
 
     'users',
 ]
@@ -56,6 +57,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
     'corsheaders.middleware.CorsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'gazouillis.urls'
@@ -126,6 +128,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
@@ -136,9 +142,6 @@ AUTH_USER_MODEL = 'users.User'
 
 
 CORS_ALLOW_ALL_ORIGINS = True
-
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 CSRF_TRUSTED_ORIGINS = ['https://gazouillis-backend-production.up.railway.app']
