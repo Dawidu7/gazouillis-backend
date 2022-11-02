@@ -4,5 +4,5 @@ from .serializers import TweetSerializer
 
 # Create your views here.
 class ListCreateTweetsView(ListCreateAPIView):
-    queryset = Tweet
+    queryset = Tweet.objects.all()
     serializer_class = TweetSerializer
