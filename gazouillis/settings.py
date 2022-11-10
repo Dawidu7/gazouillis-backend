@@ -153,4 +153,4 @@ CORS_ALLOWED_ORIGINS = [
 CORS_ALLOW_METHODS = ['GET', 'POST', 'DELETE', 'PUT']
 
 
-CSRF_TRUSTED_ORIGINS = ['https://gazouillis-b.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://gazouillis-b.up.railway.app', 'http://localhost:3000']
