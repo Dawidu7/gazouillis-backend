@@ -158,6 +158,9 @@ ALLOWED_HOSTS=['*']
 CORS_ALLOW_CREDENTIALS = True
 
 
+CORS_ALLOW_HEADERS = ['*']
+
+
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000/',
 ]
